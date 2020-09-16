@@ -37,3 +37,22 @@ as.numeric(pull(df, log_vec))
 as.numeric(pull(df, char_vec))
 as.numeric(pull(df, fac_vec))
 ```
+
+```{r}
+as.numeric(pull(df, log_vec)) * pull(df, num)
+factor(pull(df, log_vec)) * pull(df, num)
+as.numeric(factor(pull(df, log_vec))) * pull(df, num)
+```
+
+Problem 2
+
+```{r}
+penguins_ds = palmerpenguins::penguins
+```
+
+The data set "penguins" consists of 8 columns and 344 rows. It contains 8 variables; they are species of penguin, islands they live in, bill length in mm, bill depth in mm, flipper length in mm, body mass in grams, sex, and year. The data set is mostly complete, with very few missing values. The penguins' mean flipper length is 200.92 mm. 
+
+We create a scatterplot of flipper_length_mm vs bill_length_mm
+```{r}
+ggplot(penguins_ds, aes(x = penguins_ds$bill_length_mm, y = penguins_ds$flipper_length_mm, color = 'species')) + geom_point()
+```
