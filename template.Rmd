@@ -1,0 +1,7 @@
+---
+title: "Assignment 1"
+author: Leo Liu
+date: Sept 14 2020 
+output: github_document
+---
+ This is my solution to Assignment 1
